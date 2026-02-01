@@ -1,0 +1,62 @@
+### read all users
+Get http://localhost:4000/user-api/users
+
+###read user by objectid
+
+Get http://localhost:4000/user-api/users/697dbd378cfde2b211347319
+
+
+### create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"rani",
+    "password":"rani",
+    "age":20
+
+}
+
+###update user
+PUT http://localhost:4000/user-api/users/697dbf03b70fe2f907e7e395
+content-Type:application/json
+
+{
+    "username":"rani",
+    "password":"rani",
+    "age":27
+
+}
+
+### delete user by objectid
+DELETE  http://localhost:4000/user-api/users/697dc3c94587b819acdef2f1
+
+
+### read all products
+Get http://localhost:4000/product-api/products
+
+###read product by objectid
+
+Get http://localhost:4000/product-api/products/697dcfb3c29071e9cedbd9f9
+
+
+### create product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "pid":12345,
+    "productname":"mobile",
+    "price":20000
+
+}
+
+###update product
+PUT http://localhost:4000/product-api/products/697dd0277cc0c13536c66701
+content-Type:application/json
+
+{
+    "pid":12345,
+    "product":"wachingmachine",
+    "price":50000
+}
