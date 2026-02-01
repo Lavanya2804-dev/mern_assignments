@@ -1,0 +1,12 @@
+steps to create the database
+
+####create database
+    >>use databasename
+
+### read database
+    >>show databases
+
+### create collection
+    >>database.createcollection(collection-name)
+
+###
