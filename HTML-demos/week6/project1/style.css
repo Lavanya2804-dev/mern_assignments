@@ -1,0 +1,95 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+
+.jumbotron {
+    background-color: #e9ecef;
+    padding: 60px 0;
+}
+
+.jumbotron h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.jumbotron p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+
+button {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+.content {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    flex: 1;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+footer {
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
