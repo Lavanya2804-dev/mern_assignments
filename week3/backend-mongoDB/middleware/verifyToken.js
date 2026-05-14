@@ -2,7 +2,7 @@ import cookieparser from "cookie-parser"
 import jwt from 'jsonwebtoken'
 export function verifyToken(req,res,next){
     //token verification logic
-
+    //
     //1.get token from req()
     let signedToken=req.cookies.token;//{token:""}
     if(!signedToken){

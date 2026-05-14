@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    text-align: center;
+
+}
+
+h1{
+    font-size:clamp(1.5rem,10vw,5rem) ;
+}
+
+img{
+    width:100%;
+   max-width:500px
+}
+

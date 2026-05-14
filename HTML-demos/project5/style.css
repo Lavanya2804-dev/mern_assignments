@@ -1,0 +1,50 @@
+/*Units demo*/
+
+/* font size rem & em*/
+/*h1{
+    font-size: 5rem;  {em, vh , wh,percentage} 
+}*/
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+   max-width:700px;
+    height:700px;
+    margin:auto;
+    border:5px solid grey;
+    margin-top:100px;
+    /* flex container */
+    display:flex;
+    /*direction */
+   /* flex-direction: row;*/
+    /* horizontal */
+    justify-content: space-around; /* around,evenly , between */
+    /*vertical*/
+   /* align-items: flex-end;*/
+   flex-wrap: wrap;
+}
+
+.child{
+    width:100px;
+    height:100px;
+}
+
+.child1{
+    background-color: red;
+   /* flex-grow:1;*/
+}
+
+.child2{
+    background-color: green;
+   /* flex-grow:2;*/
+}
+
+.child3{
+    background-color: blue;
+   /*flex-shrink: 0; (by default the shrink is 0 )*/
+}

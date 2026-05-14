@@ -1,0 +1,34 @@
+body {
+    background-color: #e8dccb;   /* light beige background */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: 1px solid #4aa3a3;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #cc6600;
+}
+
+p {
+    line-height: 1.5;
+}

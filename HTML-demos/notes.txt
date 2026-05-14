@@ -1,0 +1,35 @@
+### Essential css concepts
+
+1.display property
+2.box model
+3.box sizing
+4.positions
+
+    top
+    bottom
+    left
+    right
+
+5.Responsive layouts
+6.media Queries
+7.flexbox
+8.grid
+
+inline occupies the required space
+inline doesnot take the width and height components
+so to take the width and height we use the display as inline-block
+
+block occupies the entire space
+we can adjust with the help of the width and height 
+
+img is also a inline but internally it is made as the inline-block.
+so we no need make explicitly inline-block
+
+
+layout-- should be responsive,nevigation bar
+
+grid--
+grid line
+grid cell
+grid track
+grid area

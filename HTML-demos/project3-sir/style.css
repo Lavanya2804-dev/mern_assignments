@@ -1,0 +1,50 @@
+/* static,relative,absolute,fixed,sticky*/
+
+/* relative ---> relative to its current position*/
+/*absolute--> relative to its positioned parent */
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing:border-box;
+
+}
+
+body
+{
+    height:2000px;
+}
+
+.parent{
+       width:500px;
+       height:700px;
+       margin:auto;
+       margin-top:150px;
+       border:2px solid gray;
+       position:relative;
+}
+
+.child{
+    width:100px;
+    height:100px;
+}
+
+.child1{
+    position:absolute;
+    background-color: red;
+    left:-50px;
+    top:-50px;
+}
+
+.child2{
+    background-color: green;
+    position:sticky;
+    top:100px;
+}
+
+.child3{
+    position:fixed;
+    background-color: blue;
+}
+

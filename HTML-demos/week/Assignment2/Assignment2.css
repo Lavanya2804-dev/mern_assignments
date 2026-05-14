@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+img {
+    float: right;
+    width: 250px;
+    margin-left: 20px;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+a {
+    color: purple;
+}

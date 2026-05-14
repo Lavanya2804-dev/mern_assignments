@@ -1,0 +1,49 @@
+.javascript is a single threaded programming language
+.multi threading is not there in Js
+.Js engine contains only one thread
+.A thread can do one task at a time
+.
+.-->synchronous means step by step execution
+
+---------------------------Asynchronous---------------------------
+most frequent Asynchronous operations in node.Js
+        .file system operations
+        .Http reguests
+        .databases operations
+        .timers
+        .cryptographic operations
+        .email sending
+        .compression and decompression
+        .stream operations
+
+-->browsers JS runtime=javascript engine + webapi + eventloop
+-->nodeJs runtime=javascriptengine + nodeJsapi + eventloop
+-->console.log()=non-blocking
+
+synchronous blocking----
+        it will block the particular code for the requied time.and does not allow
+        others instructions to work.
+synchronous non-blocking---
+        it will not block the code
+        ex-console.log("hello")
+Asynchronous blocking---
+
+Asynchronous non-blocking--
+
+----------------timer functions----------------
+timer function executes Asynchronous
+setTimeout(()=>{},timeout)
+setinterval(()=>{},timeout)
+
+---------------------promises-------------------------
+
+every promise starts with the pending
+        .pending state
+        .fulfilled
+        .rejected
+every promises is acting as a furture action.but one day it happens
+ex-"A promise to call after 10 minutes " ---Asynchronous
+every promise always will have two parties
+        .promise producer
+        .promise consumer
+

@@ -1,0 +1,67 @@
+Js is a dynamically typed language.
+Js is a object oriented and function oriented 
+
+other programming languages like c, java etc...are the 
+static typed language.
+
+//functions
+
+benefits
+--------
+    .reuse when required
+
+function decleration:-
+---------------------
+    function sum (a,b){
+        let sum=a+b;
+        return sum
+    }
+
+when we declare the function it is not executed 
+automatically.it should be called explicitly.
+
+function calling:-
+------------------
+sum(10,20)
+
+even we call the function . we need to store that
+ in one of the variable
+
+ let result=sum(10,20)
+ console.log(result)
+
+ without function their will no reusability
+
+ --------------------------------------------------
+collections of data:-
+---------------------
+.write a function that receives marks array as a argument and returns small element.
+
+.write a function that recevies "skills" array and "skillname"
+as argumruments and return the index if "skillname" existed, otherwise
+"skill not found"
+
+when we decalre a variable by default it is undefined.
+the data type of variable can be know by installization.
+
+we have two types
+    .ordered collection----packing 
+    .unordered collection---unpacking
+ -----------------------------
+ object(pack of properties)----unordered collection
+ properties key:value pair
+ to iterate an oject we use the for-in loop
+
+object operations
+-----------------
+    Accessing properties(.operation we use)
+    iterating an object(forinloop)
+    inserting new properties dynamically
+    deleting properties dynamically
+    updating properties dynamically
+    complex object
+
+
+create student object with properties rollno,name,age,city
+create product object with properties productname,brand,price
+

@@ -1,0 +1,39 @@
+
+.parent{
+    width:400px;
+    margin:auto;
+    margin-top:200px;
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
+    text-align:center;
+
+}
+
+body{
+    background-color:gray;
+}
+
+img{
+    width:100px;
+    border-radius: 50%;
+    margin-bottom:30px;
+}
+
+h3{
+    background-color: darkblue;
+    border-radius: 5px;
+    color:white;
+    padding:7px;
+    width:100px;
+    margin:auto;
+}
+
+.logo{
+    width:20px;
+    height:20px;
+    position:absolute;
+    right:700px;
+    top:60px;
+    margin:auto;
+}

@@ -1,0 +1,61 @@
+/*
+    body{
+        background-color: black;
+        color:white;
+    }
+
+
+@media print{
+    body{
+        background-color: white;
+        color:black
+    }
+    img{
+        display:none;
+    }
+}
+
+
+
+@media screen and (orientation: landscape)
+{
+    body{
+        background-color:green ;
+    }
+}
+@media screen and (max-width:501px){
+    body{
+        background-color:blue ;
+    }
+    img{
+        display:none;
+    }
+}
+
+@media screen and (max-width:701px){
+    body{
+        background-color:yellow ;
+    }
+}
+*/
+
+/* image 1 below 500px */
+@media screen and (max-width:500px){
+    body{
+        background-color:blue ;
+    }
+}
+
+ /*no img  b/w 501px and 700px*/
+
+
+ /*image 2 above 701px*/
+@media screen and (max-width:705px){
+    body{
+        background-color:yellow ;
+    }
+    img1{
+        display:none;
+    }
+}
+ 

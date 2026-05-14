@@ -1,0 +1,45 @@
+body {
+    background-color: #d9dcc7;   /* light green background */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.intro img {
+    width: 200px;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 30px;
+}
+
+.link-text {
+    color: red;
+    margin-top: 10px;
+}

@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* nav styles*/
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(59, 58, 58);
+}
+
+nav ul{
+    width:400px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav ul a{
+    text-decoration: none;
+    font-size:1.5rem;
+    color:white
+}
+
+nav ul a:hover{
+    color: orange;
+}
+
+.logo{
+    width:80px;
+    border-radius:50%;
+    padding:10px;
+}
+
+main{
+    margin:0px 70px;
+}
+
+.card{
+   /* flex-shrink:0;
+    flex-grow: 0;
+    flex-basis:300px;*/
+
+    flex:0 0 250px;
+    padding:25px;
+    text-align:center;
+    margin-bottom:50px;
+    box-shadow: 1px 1px 10px grey ;
+    border-radius: 10px;
+}
+
+.card img{
+    width:70%;
+    border-radius:50%;
+}
+
+.row{
+    display:flex;
+    justify-content: space-around;
+    gap:30px; 
+}
+
+.card button{
+    border:none;
+    background-color: aqua;
+    color: white;
+    padding:5px 10px;
+    border:5px;
+}
+
+footer {
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(79, 75, 75);
+    padding:20px 40px;
+}
+
+footer ul{
+    display:flex;
+    list-style-type: none;
+}
+
+footer ul a{
+    text-decoration: none;
+    font-size:1.5rem;
+    color:white
+}
+
+
+@media screen and (max-width:700px){
+    .row{
+        flex-wrap: wrap;
+        flex: 0 0 45%;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        flex-direction:column ;
+    }
+    footer{
+
+        flex-direction: column;
+        align-items:center ;
+    }
+    footer ul{
+        flex-direction: column;
+    }
+}
