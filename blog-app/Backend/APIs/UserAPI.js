@@ -50,7 +50,7 @@ userRoute.post(
 //read all user
 // View all active articles
 // View all articles written by authors
-userRoute.get("/articles",verifyToken("USER"),async (req, res) => {
+userRoute.get("/articles",async (req, res) => {
     const articles = await ArticleModel
       .find({ isArticleActive: true })
       .populate("author", "firstName email")
@@ -68,7 +68,7 @@ userRoute.get("/articles",verifyToken("USER"),async (req, res) => {
 // Add comment to an article
 // User adds comment under an article
 
-userRoute.put("/articles", verifyToken("USER"), async (req, res) => {
+userRoute.put("/articles", async (req, res) => {
   const { articleId, comment } = req.body;
   const user = req.user.userId;
 
