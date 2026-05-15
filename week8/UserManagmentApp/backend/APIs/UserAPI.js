@@ -7,14 +7,25 @@ export const UserApp = exp.Router();
 
 // Create User
 UserApp.post("/users", async (req, res) => {
-  //get new user
-  const newUser = req.body;
-  //create user document
-  const newUserDocument = new UserModel(newUser);
-  //save new user
-  let user = await newUserDocument.save();
-  //send res
-  res.status(201).json({ message: "User created", payload: user });
+  try {
+    const newUser = req.body;
+
+    const newUserDocument = new UserModel(newUser);
+
+    let user = await newUserDocument.save();
+
+    res.status(201).json({
+      message: "User created",
+      payload: user,
+    });
+
+  } catch (err) {
+    console.log(err);
+
+    res.status(500).json({
+      message: err.message,
+    });
+  }
 });
 
 // Read all Users
