@@ -36,8 +36,8 @@ async function connectDB() {
     });
 
   } catch (err) {
-    console.log("Error in DB connection:", err.message);
-  }
+  console.log("FULL ERROR:", err);
+}
 }
 
 connectDB();
