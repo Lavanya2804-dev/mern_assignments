@@ -13,7 +13,7 @@ const app = exp();
 
 app.use(cors({
   origin:["http://localhost:5173",
-    "https://mern-assignments-q35q.vercel.app/"
+    "https://mern-assignments-q35q.vercel.app"
   ],
   credentials: true
 }))
