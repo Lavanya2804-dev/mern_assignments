@@ -1,6 +1,6 @@
 // Create mini-express app
 import exp from "express";
-import { UserModel } from "../models/UserModel.js";
+import { UserModel } from "../Models/UserModel.js";
 export const UserApp = exp.Router();
 
 //USER API ROUTES
