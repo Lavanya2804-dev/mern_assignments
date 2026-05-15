@@ -20,13 +20,18 @@ UserApp.post("/users", async (req, res) => {
     });
 
   } catch (err) {
-    console.log(err);
+  console.log("POST ERROR:", err);
 
-    res.status(500).json({
-      message: err.message,
+  if (err.code === 11000) {
+    return res.status(409).json({
+      message: "Email already exists",
     });
   }
-});
+
+  res.status(500).json({
+    message: err.message,
+  });
+}
 
 // Read all Users
 UserApp.get("/users", async (req, res) => {
