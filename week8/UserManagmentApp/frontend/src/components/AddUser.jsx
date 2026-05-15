@@ -33,9 +33,11 @@ function AddUser() {
         //user created it shd navigate to users list
         navigate("/users-list");
       } else {
-        console.log(res)
-        throw new Error("error occurred");
-      }
+  const errorData = await res.json();
+  console.log(errorData);
+
+  throw new Error(errorData.message);
+}
     } catch (err) {
       console.log(err)
       setError(err);
