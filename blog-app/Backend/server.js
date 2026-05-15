@@ -15,7 +15,10 @@ const app=exp()
 app.use(exp.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow only your frontend
+  origin: [
+  "http://localhost:5173",
+  'https://mern-assignments-emt9.vercel.app'
+  ],// Allow only your frontend
   credentials: true                // This is the key part you are missing!
 }));
 

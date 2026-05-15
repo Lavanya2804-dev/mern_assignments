@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -46,7 +47,7 @@ const [replyText, setReplyText] = useState("");
 
     try {
       const res = await axios.get(
-        `http://localhost:4000/user-api/article/${id}`,
+        `${API}/user-api/article/${id}`,
         { withCredentials: true }
       );
 
@@ -81,7 +82,7 @@ const [replyText, setReplyText] = useState("");
   const deleteArticle = async () => {
   try {
     await axios.patch(
-      `http://localhost:4000/author-api/articles/${id}/status`,
+      `${API}/author-api/articles/${id}/status`,
       { isArticleActive: false },
       { withCredentials: true }
     );
@@ -104,7 +105,7 @@ const addComment = async () => {
     // ✅ AUTHOR API
     if (user?.role === "AUTHOR") {
       res = await axios.post(
-        `http://localhost:4000/author-api/comment/${article._id}`,
+        `${API}/author-api/comment/${article._id}`,
         { comment },
         { withCredentials: true }
       );
@@ -112,7 +113,7 @@ const addComment = async () => {
     // ✅ USER API
     else {
       res = await axios.put(
-        `http://localhost:4000/user-api/articles`,
+        `${API}/user-api/articles`,
         {
           articleId: article._id,
           comment: comment
@@ -139,7 +140,7 @@ const addComment = async () => {
     if (!window.confirm("Delete this comment?")) return;
 
     await axios.delete(
-      `http://localhost:4000/author-api/comment/${article._id}/${commentId}`,
+      `${API}/author-api/comment/${article._id}/${commentId}`,
       { withCredentials: true }
     );
 
@@ -156,7 +157,7 @@ const addComment = async () => {
 const handleEditComment = async (commentId) => {
   try {
     const res = await axios.put(
-      `http://localhost:4000/author-api/comment/${article._id}/${commentId}`,
+      `${API}/author-api/comment/${article._id}/${commentId}`,
       { comment: editText },
       { withCredentials: true }
     );
@@ -178,7 +179,7 @@ const handleEditComment = async (commentId) => {
 const handleReply = async (commentId) => {
   try {
     const res = await axios.post(
-      `http://localhost:4000/author-api/reply/${article._id}/${commentId}`,
+      `${API}/author-api/reply/${article._id}/${commentId}`,
       { comment: replyText },
       { withCredentials: true }
     );

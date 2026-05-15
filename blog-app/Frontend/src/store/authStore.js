@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { create } from "zustand";
 import axios from "axios";
 
@@ -14,7 +15,7 @@ export const useAuth = create((set) => ({
     set({ loading: true, error: null });
 
     const res = await axios.post(
-      "http://localhost:4000/common-api/login",
+      `${API}/common-api/login`,
       userCredObj,
       { withCredentials: true }
     );
@@ -41,7 +42,7 @@ export const useAuth = create((set) => ({
       set({ loading: true, error: null });
 
       await axios.get(
-        "http://localhost:4000/common-api/logout",
+        `${API}/common-api/logout`,
         { withCredentials: true }
       );
 
@@ -64,7 +65,7 @@ export const useAuth = create((set) => ({
   checkAuth: async () => {
     try {
       set({ loading: true });
-      const res = await axios.get("http://localhost:4000/common-api/check-auth", { withCredentials: true });
+      const res = await axios.get(`${API}/common-api/check-auth`, { withCredentials: true });
 
       set({
         currentUser: res.data.payload,

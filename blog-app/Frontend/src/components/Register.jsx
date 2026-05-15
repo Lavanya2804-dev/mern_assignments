@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { useForm } from "react-hook-form";
 import {
   pageBackground,
@@ -47,7 +48,7 @@ function Register() {
   try {
     if (role === "user") {
       await axios.post(
-        "http://localhost:4000/user-api/users",
+        `${API}/user-api/users`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -55,7 +56,7 @@ function Register() {
 
     if (role === "author") {
       await axios.post(
-        "http://localhost:4000/author-api/users",
+        `${API}/author-api/users`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

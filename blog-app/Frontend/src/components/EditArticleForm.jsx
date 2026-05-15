@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -29,7 +30,7 @@ useEffect(() => {
 
   const fetchArticle = async () => {
     const res = await axios.get(
-      `http://localhost:4000/user-api/article/${id}`,
+      `${API}/user-api/article/${id}`,
       { withCredentials: true }
     );
     setArticle(res.data.payload);
@@ -58,7 +59,7 @@ useEffect(() => {
   const updateArticle = async (data) => {
     try {
       const response = await axios.put(
-  `http://localhost:4000/author-api/articles/${id}`,
+  `${API}/author-api/articles/${id}`,
   data,
   { withCredentials: true }
 );

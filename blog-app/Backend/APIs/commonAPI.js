@@ -15,16 +15,21 @@ commonRoute.post("/login", async (req, res) => {
     let { token, user } = await login(userCred);
 
     res.cookie("token", token, {
-      httpOnly: true,
-      sameSite: "lax",
-      secure: false,
-      path:"/",
-    });
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite:
+    process.env.NODE_ENV === "production"
+      ? "none"
+      : "lax",
+  path: "/",
+});
 
     res.status(200).json({
       message: "login success",
       payload: { token, user },
     });
+
+    console.log("TOKEN:", token);
 
   } catch (err) {
     res.status(err.status || 500).json({
@@ -37,11 +42,15 @@ commonRoute.post("/login", async (req, res) => {
 // LOGOUT
 commonRoute.get("/logout", async (req, res) => {
 
-  res.clearCookie("token", {
-    httpOnly: true,
-    secure: false,
-    sameSite: "lax",
-  });
+ res.clearCookie("token", {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite:
+    process.env.NODE_ENV === "production"
+      ? "none"
+      : "lax",
+  path: "/",
+});
 
   res.status(200).json({
     message: "logged out successfully",
@@ -103,10 +112,3 @@ commonRoute.put("/change-password", async (req, res) => {
   });
 });
 
-//page refresh
-commonRoute.get("/check-auth",verifyToken("USER","AUTHOR","ADMIN"),(req,res)=>{
-  res.status(200).json({
-    message:"authenticated",
-    payload:req.user
-  })
-})

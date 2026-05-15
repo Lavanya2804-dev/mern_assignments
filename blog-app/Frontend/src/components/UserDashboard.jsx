@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { useAuth } from "../store/authStore";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -29,7 +30,7 @@ function UserDashboard() {
 
       try {
         const res = await axios.get(
-          "http://localhost:4000/user-api/articles",
+          "${API}/user-api/articles",
           { withCredentials: true }
         );
 

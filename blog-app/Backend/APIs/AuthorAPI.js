@@ -260,3 +260,46 @@ authorRoute.post(
     }
   }
 );
+
+authorRoute.patch(
+  "/articles/:articleId/status",
+  verifyToken("AUTHOR"),
+  async (req, res) => {
+
+    try {
+
+      const { articleId } = req.params;
+
+      const article = await ArticleModel.findById(articleId);
+
+      if (!article) {
+        return res.status(404).json({
+          message: "Article not found",
+        });
+      }
+
+      // allow only owner
+      if (article.author.toString() !== req.user.userId) {
+        return res.status(403).json({
+          message: "Forbidden",
+        });
+      }
+
+      article.isArticleActive = false;
+
+      await article.save();
+
+      res.status(200).json({
+        message: "Article deleted",
+        payload: article,
+      });
+
+    } catch (err) {
+
+      res.status(500).json({
+        message: err.message,
+      });
+
+    }
+  }
+);

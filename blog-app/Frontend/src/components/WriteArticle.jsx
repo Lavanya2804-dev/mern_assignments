@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
@@ -35,7 +36,7 @@ function WriteArticle() {
     articleObj.author = currentUser._id || currentUser.userId;
     try {
       await axios.post(
-        "http://localhost:4000/author-api/articles",
+        `${API}/author-api/articles`,
         articleObj,
         { withCredentials: true }
       );

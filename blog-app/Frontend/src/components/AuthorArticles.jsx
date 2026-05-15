@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -38,13 +39,14 @@ function AuthorArticles() {
       console.log("Author ID:", authorId);
 
       const res = await axios.get(
-        `http://localhost:4000/author-api/articles/${authorId}`,
+        `${API}/author-api/articles/${authorId}`,
         { withCredentials: true }
       );
 
       setArticles(res.data.payload || []);
     } catch (err) {
       console.error(err);
+      console.log(document.cookie);
       setError(err.response?.data?.error || "Failed to fetch articles");
     } finally {
       setLoading(false);

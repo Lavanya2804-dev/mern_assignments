@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_URL;
 import { useForm } from "react-hook-form";
 import {
   pageBackground,
